@@ -3,7 +3,7 @@ import { GridItemSix, GridLayout } from '@components/GridLayout'
 import Collectors from '@components/Shared/Collectors'
 import Markup from '@components/Shared/Markup'
 import ReferralAlert from '@components/Shared/ReferralAlert'
-import CrowdfundShimmer from '@components/Shared/Shimmer/CrowdfundShimmer'
+import FundraiseShimmer from '@components/Shared/Shimmer/FundraiseShimmer'
 import { Card } from '@components/UI/Card'
 import { Modal } from '@components/UI/Modal'
 import { Tooltip } from '@components/UI/Tooltip'
@@ -25,7 +25,7 @@ import { COLLECT_QUERY } from '../Actions/Collect/CollectModule'
 import Fund from './Fund'
 
 export const CROWDFUND_REVENUE_QUERY = gql`
-  query CrowdfundRevenue($request: PublicationRevenueQueryRequest!) {
+  query FundraiseRevenue($request: PublicationRevenueQueryRequest!) {
     publicationRevenue(request: $request) {
       earnings {
         value
@@ -52,7 +52,7 @@ interface Props {
   fund: BCharityPost
 }
 
-const Crowdfund: FC<Props> = ({ fund }) => {
+const Fundraise: FC<Props> = ({ fund }) => {
   const { currentUser } = useContext(AppContext)
   const [showFundersModal, setShowFundersModal] = useState<boolean>(false)
   const [revenue, setRevenue] = useState<number>(0)
@@ -63,7 +63,7 @@ const Crowdfund: FC<Props> = ({ fund }) => {
       consoleLog(
         'Query',
         '#8b5cf6',
-        `Fetched collect module details Crowdfund:${fund?.id}`
+        `Fetched collect module details Fundraise:${fund?.id}`
       )
     }
   })
@@ -84,7 +84,7 @@ const Crowdfund: FC<Props> = ({ fund }) => {
         consoleLog(
           'Query',
           '#8b5cf6',
-          `Fetched crowdfund revenue details Crowdfund:${fund?.id}`
+          `Fetched fundraise revenue details Fundraise:${fund?.id}`
         )
       }
     }
@@ -102,7 +102,7 @@ const Crowdfund: FC<Props> = ({ fund }) => {
     : 0
   const cover = fund?.metadata?.cover?.original?.url
 
-  if (loading) return <CrowdfundShimmer />
+  if (loading) return <FundraiseShimmer />
 
   return (
     <Card forceRounded>
@@ -270,4 +270,4 @@ const Crowdfund: FC<Props> = ({ fund }) => {
   )
 }
 
-export default Crowdfund
+export default Fundraise

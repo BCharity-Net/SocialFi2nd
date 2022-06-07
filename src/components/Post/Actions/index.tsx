@@ -18,7 +18,7 @@ const PostActions: FC<Props> = ({ post }) => {
       <Comment post={post} />
       <Mirror post={post} />
       {post?.collectModule?.__typename !== 'RevertCollectModuleSettings' &&
-        postType !== 'crowdfund' && <Collect post={post} />}
+        postType !== 'fundraise' && <Collect post={post} />}
       <PostMenu post={post} />
     </div>
   ) : null

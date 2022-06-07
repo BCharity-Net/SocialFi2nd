@@ -119,7 +119,7 @@ const Fund: FC<Props> = ({ fund, collectModule, setRevenue, revenue }) => {
   const onCompleted = () => {
     setRevenue(revenue + parseFloat(collectModule?.amount?.value))
     toast.success('Transaction submitted successfully!')
-    trackEvent('fund a crowdfund')
+    trackEvent('fund a fundraise')
   }
 
   const {

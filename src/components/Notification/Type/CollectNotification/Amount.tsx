@@ -16,7 +16,7 @@ const CollectedAmount: FC<Props> = ({ notification }) => {
 
   return (
     <div className="flex items-center mt-2 space-x-1">
-      {postType === 'crowdfund' ? (
+      {postType === 'fundraise' ? (
         <HandIcon className="text-green-500 h-[15px]" />
       ) : (
         <CurrencyDollarIcon className="text-green-500 h-[15px]" />
@@ -26,7 +26,7 @@ const CollectedAmount: FC<Props> = ({ notification }) => {
       ) : (
         <>
           <div className="text-[12px]">
-            {postType === 'crowdfund' ? 'Funded' : 'Collected for'}{' '}
+            {postType === 'fundraise' ? 'Funded' : 'Collected for'}{' '}
             {humanize(collectModule?.amount?.value)}{' '}
             {collectModule?.amount?.asset?.symbol}
           </div>

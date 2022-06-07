@@ -29,8 +29,8 @@ const Mirrored: FC<Props> = ({ post }) => {
             <span>mirrored the </span>
             <b>
               {post?.mirrorOf.__typename === 'Post'
-                ? postType === 'crowdfund'
-                  ? 'crowdfund'
+                ? postType === 'fundraise'
+                  ? 'fundraise'
                   : post?.mirrorOf.__typename?.toLowerCase()
                 : post?.mirrorOf.__typename?.toLowerCase()}
             </b>

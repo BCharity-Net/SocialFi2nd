@@ -38,8 +38,8 @@ const LENSTER_STATS_QUERY = gql`
     ) {
       totalPosts
     }
-    crowdfundStats: globalProtocolStats(
-      request: { sources: "BCharity Crowdfund" }
+    fundraiseStats: globalProtocolStats(
+      request: { sources: "BCharity Fundraise" }
     ) {
       totalPosts
     }
@@ -86,7 +86,7 @@ const Stats: FC = () => {
 
   const stats: GlobalProtocolStats = data?.globalProtocolStats
   const communityStats: GlobalProtocolStats = data?.communityStats
-  const crowdfundStats: GlobalProtocolStats = data?.crowdfundStats
+  const fundraiseStats: GlobalProtocolStats = data?.fundraiseStats
 
   return (
     <>
@@ -146,7 +146,7 @@ const Stats: FC = () => {
         icon={<CashIcon className="w-4 h-4" />}
         title={
           <span>
-            <b>{humanize(crowdfundStats?.totalPosts)}</b> total crowdfunds
+            <b>{humanize(fundraiseStats?.totalPosts)}</b> total fundraises
           </span>
         }
         isBCharity

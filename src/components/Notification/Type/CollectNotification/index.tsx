@@ -48,7 +48,7 @@ const CollectNotification: FC<Props> = ({ notification }) => {
         <span className="text-gray-600 dark:text-gray-400">
           {postType === 'group'
             ? 'joined your'
-            : postType === 'crowdfund'
+            : postType === 'fundraise'
             ? 'funded your'
             : 'collected your'}{' '}
         </span>
@@ -78,7 +78,7 @@ const CollectNotification: FC<Props> = ({ notification }) => {
         <div className="flex items-center pt-1 space-x-1 text-gray-400 text-[12px]">
           {postType === 'group' ? (
             <UsersIcon className="text-pink-500 h-[15px]" />
-          ) : postType === 'crowdfund' ? (
+          ) : postType === 'fundraise' ? (
             <CashIcon className="text-pink-500 h-[15px]" />
           ) : (
             <CollectionIcon className="text-pink-500 h-[15px]" />

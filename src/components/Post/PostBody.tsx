@@ -1,7 +1,7 @@
 import Attachments from '@components/Shared/Attachments'
 import IFramely from '@components/Shared/IFramely'
 import Markup from '@components/Shared/Markup'
-import CrowdfundShimmer from '@components/Shared/Shimmer/CrowdfundShimmer'
+import FundraiseShimmer from '@components/Shared/Shimmer/FundraiseShimmer'
 import { BCharityPost } from '@generated/bcharitytypes'
 import { UserAddIcon, UsersIcon } from '@heroicons/react/outline'
 import getURLs from '@lib/getURLs'
@@ -12,8 +12,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { FC, useState } from 'react'
 
-const Crowdfund = dynamic(() => import('./Crowdfund'), {
-  loading: () => <CrowdfundShimmer />
+const Fundraise = dynamic(() => import('./Fundraise'), {
+  loading: () => <FundraiseShimmer />
 })
 
 interface Props {
@@ -64,8 +64,8 @@ const PostBody: FC<Props> = ({ post }) => {
             </a>
           </Link>
         </div>
-      ) : postType === 'crowdfund' ? (
-        <Crowdfund fund={post} />
+      ) : postType === 'fundraise' ? (
+        <Fundraise fund={post} />
       ) : (
         <>
           <div
@@ -93,7 +93,7 @@ const PostBody: FC<Props> = ({ post }) => {
         <Attachments attachments={post?.metadata?.media} />
       ) : (
         post?.metadata?.content &&
-        postType !== 'crowdfund' &&
+        postType !== 'fundraise' &&
         postType !== 'group' &&
         getURLs(post?.metadata?.content)?.length > 0 && (
           <IFramely url={getURLs(post?.metadata?.content)[0]} />

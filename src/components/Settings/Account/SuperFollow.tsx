@@ -38,7 +38,7 @@ import {
 } from 'wagmi'
 import { object, string } from 'zod'
 
-const newCrowdfundSchema = object({
+const newFundraiseSchema = object({
   amount: string().min(1, { message: 'Invalid amount' }),
   recipient: string()
     .max(42, { message: 'Ethereum address should be within 42 characters' })
@@ -142,7 +142,7 @@ const SuperFollow: FC = () => {
   )
 
   const form = useZodForm({
-    schema: newCrowdfundSchema,
+    schema: newFundraiseSchema,
     defaultValues: {
       recipient: currentUser?.ownedBy
     }

@@ -59,7 +59,7 @@ const MODULES_CURRENCY_QUERY = gql`
   }
 `
 
-const newCrowdfundSchema = object({
+const newFundraiseSchema = object({
   title: string()
     .min(2, { message: 'Title should be atleast 2 characters' })
     .max(255, { message: 'Title should not exceed 255 characters' }),
@@ -101,7 +101,7 @@ const Create: NextPage = () => {
   })
 
   const onCompleted = () => {
-    trackEvent('new crowdfund', 'create')
+    trackEvent('new fundraise', 'create')
   }
 
   const {
@@ -125,7 +125,7 @@ const Create: NextPage = () => {
   )
 
   const form = useZodForm({
-    schema: newCrowdfundSchema,
+    schema: newFundraiseSchema,
     defaultValues: {
       recipient: currentUser?.ownedBy
     }
@@ -210,7 +210,7 @@ const Create: NextPage = () => {
     }
   )
 
-  const createCrowdfund = async (
+  const createFundraise = async (
     title: string,
     amount: string,
     goal: string,
@@ -237,7 +237,7 @@ const Create: NextPage = () => {
           {
             traitType: 'string',
             key: 'type',
-            value: 'crowdfund'
+            value: 'fundraise'
           },
           {
             traitType: 'string',
@@ -246,7 +246,7 @@ const Create: NextPage = () => {
           }
         ],
         media: [],
-        appId: 'BCharity Crowdfund'
+        appId: 'BCharity Fundraise'
       }).finally(() => setIsUploading(false))
 
       createPostTypedData({
@@ -274,16 +274,16 @@ const Create: NextPage = () => {
     }
   }
 
-  if (loading) return <PageLoading message="Loading create crowdfund" />
+  if (loading) return <PageLoading message="Loading create fundraise" />
   if (!currentUser) return <Custom404 />
 
   return (
     <GridLayout>
-      <SEO title="Create Crowdfund • BCharity" />
+      <SEO title="Create Fundraise • BCharity" />
       <GridItemFour>
         <SettingsHelper
-          heading="Create crowdfund"
-          description="Create new decentralized crowdfund"
+          heading="Create fundraise"
+          description="Create new decentralized fundraise"
         />
       </GridItemFour>
       <GridItemEight>
@@ -293,9 +293,9 @@ const Create: NextPage = () => {
               txHash={
                 data?.hash ? data?.hash : broadcastData?.broadcast?.txHash
               }
-              indexing="Crowdfund creation in progress, please wait!"
-              indexed="Crowdfund created successfully"
-              type="crowdfund"
+              indexing="Fundraise creation in progress, please wait!"
+              indexed="Fundraise created successfully"
+              type="fundraise"
               urlPrefix="posts"
             />
           ) : (
@@ -310,7 +310,7 @@ const Create: NextPage = () => {
                 referralFee,
                 description
               }) => {
-                createCrowdfund(
+                createFundraise(
                   title,
                   amount,
                   goal,
@@ -394,7 +394,7 @@ const Create: NextPage = () => {
                 label="Referral Fee"
                 helper={
                   <span>
-                    When someone mirrors the crowdfund they will get some reward
+                    When someone mirrors the fundraise they will get some reward
                     in percentage for referring it.
                   </span>
                 }

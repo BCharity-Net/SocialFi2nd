@@ -41,7 +41,7 @@ const CollectedContent: FC<Props> = ({ notification }) => {
             <div>{notification?.collectedPublication?.metadata?.name}</div>
           </a>
         </Link>
-      ) : postType === 'crowdfund' ? (
+      ) : postType === 'fundraise' ? (
         <Link
           href={`/posts/${notification?.collectedPublication?.id}`}
           prefetch={false}

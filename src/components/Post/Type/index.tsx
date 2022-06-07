@@ -30,10 +30,10 @@ const PostType: FC<Props> = ({ post, hideType, showThread }) => {
       {postType === 'group post' &&
         pathname !== '/groups/[id]' &&
         type !== 'Mirror' && <GroupPost post={post} />}
-      {isCollected && postType !== 'group' && postType !== 'crowdfund' && (
+      {isCollected && postType !== 'group' && postType !== 'fundraise' && (
         <Collected post={post} type="Collected" />
       )}
-      {isCollected && postType === 'crowdfund' && (
+      {isCollected && postType === 'fundraise' && (
         <Collected post={post} type="Funded" />
       )}
     </>

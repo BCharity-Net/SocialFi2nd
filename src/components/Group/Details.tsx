@@ -145,9 +145,7 @@ const Details: FC<Props> = ({ group }) => {
                 onClick={() => setShowMembersModal(!showMembersModal)}
               >
                 {humanize(group?.stats?.totalAmountOfCollects)}{' '}
-                {group?.stats?.totalAmountOfCollects > 1
-                  ? 'members'
-                  : 'member'}
+                {group?.stats?.totalAmountOfCollects > 1 ? 'members' : 'member'}
               </button>
               <Modal
                 title="Members"

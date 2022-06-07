@@ -205,8 +205,8 @@ const SetProfile: FC = () => {
         <div className="text-lg font-bold">What else you should know</div>
         <div className="text-sm text-gray-500 divide-y dark:divide-gray-700">
           <p className="pb-3">
-            Only the default profile will be visible across the BCharity, example
-            notifications, follow etc.
+            Only the default profile will be visible across the BCharity,
+            example notifications, follow etc.
           </p>
           <p className="py-3">You can change default profile anytime here.</p>
         </div>

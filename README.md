@@ -14,26 +14,26 @@
     <a href="https://gitpod.io/#https://gitlab.com/bcharity/bcharity/-/tree/main">
         <img src="https://img.shields.io/badge/setup-automated-blue?logo=gitpod" alt="Gitpod">
     </a>
-    <a href="https://gitlab.com/bcharity/bcharity/-/commits/main">
+    <a href="https://github.com/BCharity-Net/SocialFi">
         <img src="https://badgen.net/gitlab/last-commit/bcharity/bcharity" alt="Last Commit">
     </a>
-    <a href="https://gitlab.com/bcharity/bcharity/-/blob/main/LICENSE">
+    <a href="https://github.com/BCharity-Net/SocialFi/LICENSE">
         <img src="https://badgen.net/gitlab/license/bcharity/bcharity" alt="Licence">
     </a>
-    <a href="https://discord.gg/B8eKhSSUwX">
+    <a href="https://discord.gg/4vKS59q5kV">
         <img src="https://img.shields.io/discord/953679040722665512.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" alt="Discord">
     </a>
-    <a href="https://twitter.com/lensterxyz">
-        <img src="https://img.shields.io/twitter/follow/lensterxyz?label=lensterxyz&style=flat&logo=twitter&color=1DA1F2" alt="BCharity Twitter">
+    <a href="https://twitter.com/bcharityfi">
+        <img src="https://img.shields.io/twitter/follow/bcharityfi?label=bcharityfi&style=flat&logo=twitter&color=1DA1F2" alt="BCharity Twitter">
     </a>
 </div>
 <div align="center">
     <br>
     <a href="https://bcharity.net"><b>bcharity.net »</b></a>
     <br><br>
-    <a href="https://discord.gg/B8eKhSSUwX"><b>Discord</b></a>
+    <a href="https://discord.gg/4vKS59q5kV"><b>Discord</b></a>
     •
-    <a href="https://gitlab.com/bcharity/bcharity/-/issues/new"><b>Issues</b></a>
+    <a href="https://github.com/BCharity-Net/SocialFi/issues"><b>Issues</b></a>
 </div>
 
 ## About BCharity

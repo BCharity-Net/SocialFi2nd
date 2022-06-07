@@ -1,7 +1,6 @@
 import AppContext from '@components/utils/AppContext'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import hasPrideLogo from '@lib/hasPrideLogo'
 import isStaff from '@lib/isStaff'
 import clsx from 'clsx'
 import dynamic from 'next/dynamic'
@@ -59,11 +58,7 @@ const Navbar: FC = () => {
           name="Explore"
           current={pathname == '/explore'}
         />
-        <NavItem
-          url="/groups"
-          name="Groups"
-          current={pathname == '/groups'}
-        />
+        <NavItem url="/groups" name="Groups" current={pathname == '/groups'} />
         <MoreNavItems />
       </>
     )

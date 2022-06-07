@@ -25,9 +25,9 @@ const Privacy: FC = () => {
               <p>
                 BCharity.net. (&ldquo;BCharity&rdquo; or &ldquo;we&rdquo;)
                 respects and protects the privacy of Users (&ldquo;you&rdquo; or
-                &ldquo;users&rdquo;). BCharity will collect and use your Personal
-                Information, generated from your use of BCharity, in accordance
-                with this Privacy Policy (&ldquo;Policy&rdquo;).
+                &ldquo;users&rdquo;). BCharity will collect and use your
+                Personal Information, generated from your use of BCharity, in
+                accordance with this Privacy Policy (&ldquo;Policy&rdquo;).
               </p>
               <div className="mt-8 mb-5 text-xl font-bold text-black dark:text-white">
                 What information do we collect

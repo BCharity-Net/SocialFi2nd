@@ -29,8 +29,8 @@ const Settings: FC<Props> = ({ group }) => {
       <div className="space-y-2">
         <div className="font-bold text-red-500">Danger Zone</div>
         <p>
-          Deleting your group will delete only from indexers and not from
-          the blockchain.
+          Deleting your group will delete only from indexers and not from the
+          blockchain.
         </p>
         <Button
           className="!mt-5"

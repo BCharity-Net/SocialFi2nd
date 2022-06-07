@@ -14,7 +14,8 @@ const Hero: React.FC = () => {
               permissionless public good Web3.0 built on blockchains.
             </div>
             <div className="leading-7 text-gray-700">
-              First-ever native utility crypto token for OnChain Volunteer Management globally --- Forever Heart Love on-chain!
+              First-ever native utility crypto token for OnChain Volunteer
+              Management globally --- Forever Heart Love on-chain!
             </div>
           </div>
           <div className="hidden flex-1 flex-shrink-0 w-full sm:block"></div>

@@ -12,8 +12,8 @@ const Announcement: FC = () => {
           <p>Beta warning!</p>
         </div>
         <p className="text-sm leading-[22px]">
-          BCharity is still in the beta phase, things may break, please handle us
-          with care.
+          BCharity is still in the beta phase, things may break, please handle
+          us with care.
         </p>
         {!IS_MAINNET && (
           <div className="flex items-center space-x-1.5 text-sm font-bold">

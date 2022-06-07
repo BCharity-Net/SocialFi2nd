@@ -386,7 +386,9 @@ const FollowModule: FC<Props> = ({
           ) : (
             <WarningMessage
               className="mt-5"
-              message={<Uniswap module={followModule as BCharityFollowModule} />}
+              message={
+                <Uniswap module={followModule as BCharityFollowModule} />
+              }
             />
           )
         ) : (
